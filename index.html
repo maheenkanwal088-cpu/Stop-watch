@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Stopwatch ⏱️</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Floating Background Particles -->
+    <div class="particles">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="stopwatch-container">
+        <!-- Cute Header -->
+        <div class="header">
+            <span class="emoji">⏱️</span>
+            <h1>My Stopwatch</h1>
+        </div>
+
+        <!-- Main Timer Display -->
+        <div class="timer-box">
+            <div class="timer-glow">
+                <div class="timer-inner">
+                    <span class="label">TIME</span>
+                    <div id="display">00:00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Indicator -->
+        <div class="status">
+            <span class="status-dot"></span>
+            <span id="statusText">Ready to Start!</span>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+            <button class="btn start" onclick="startTimer()">
+                <span class="btn-icon">▶️</span>
+                <span>Start</span>
+            </button>
+            <button class="btn stop" onclick="stopTimer()">
+                <span class="btn-icon">⏹️</span>
+                <span>Stop</span>
+            </button>
+            <button class="btn reset" onclick="resetTimer()">
+                <span class="btn-icon">🔄</span>
+                <span>Reset</span>
+            </button>
+            <button class="btn lap" onclick="lapTimer()">
+                <span class="btn-icon">📍</span>
+                <span>Lap</span>
+            </button>
+        </div>
+
+        <!-- Lap Times Display -->
+        <div class="laps-container">
+            <h3>🏃 Laps</h3>
+            <ul id="lapsList"></ul>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
